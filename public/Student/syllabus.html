@@ -1,0 +1,139 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+  
+  <title>Browser</title>
+  <link rel="stylesheet" href="style_student.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Image/iiitl_logo.png" alt="Logo">
+            <h2>IIIT <br>LUCKNOW</h2>
+        </div>
+        <div class="quotes">
+            <h2>welcome to the class welcome to the class</h2>
+        </div>
+        <div class="menu_profile">
+            <div class="navbar-profile" onclick="menuToggle();">
+                <img src="Image/profile.jpg" alt="Profile" >
+            </div>
+            <div class="profile_down">
+                <h3>Priya</h3>
+                <ul>
+                    <li>Roll No: lcs2020055</li>
+                    <li>Branch: CS</li>
+                    <li>Academic Year: 2024</li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="contain_all">
+        <aside>
+            <div class="sidebar">
+                <a href="index.html" >
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="syllabus.html"  class="active">
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Syllabus</h3>
+                </a>
+                <a href="exam_schedule.html">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Exam Schedule</h3>
+                </a>
+                <a href="results.html">
+                    <span class="material-icons-sharp">credit_score</span>
+                    <h3>Results</h3>
+                </a>
+                <a href="register.html">
+                    <span class="material-icons-sharp">app_registration</span>
+                    <h3>Register</h3>
+                </a>
+                <a href="seating.html">
+                    <span class="material-icons-sharp">airline_seat_recline_normal</span>
+                    <h3>Seating <br> Arrangement</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1>Syllabus</h1>
+            <div class="date">
+                <h3><span id="date"></span></h3>
+            </div>
+            <div class="insights" style="grid-template-columns: repeat(1 ,1fr); width: auto;">
+                <a href="#">
+                    <div class="subjectt">    
+                        <label>Enter Subject code :</label>
+                        <input id="subCode" type="text" class="input">
+                        <button id="subCodeSubmit">submit</button>   
+                    </div>
+                </a>
+                <iframe></iframe>
+                <!-- <a href="#">
+                    <div class="IOT">
+                        <div>
+                            <h2>AI for Internet of Things</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="CD">
+                        <div>
+                            <h2>Compiler Design</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="OS">
+                        <div>
+                            <h2>Operating System</h2>
+                        </div>
+                    </div>
+                </a>             -->
+            </div>
+        </main>
+        <div class="contain-rig" style="width: 70rem;">
+            
+            <div class="scrollable-list-2">
+                <h2>Subject Codes for Reference</h2> 
+                <div class="scrollable-list">
+                    <ul>
+                        <li>Deep Learning : DPL320</li>
+                        <li>Software Engineering : SET430</li>
+                        <li>Machine Learning : MLT120</li>
+                        <li>Compiler Design : CDL440</li>
+                        <li>AI for IOT : AII230</li>
+                        <li>Computer Graphics : CGL981</li>
+                        <li>Operating System : OSC327</li>
+                        <li>Artificail Intelligence : AIL342</li>
+                        <li>Image and vision : IVP450</li>
+                        <li>Data Structures : DST768</li>
+                    </ul>
+
+                </div>
+
+                
+              </div>
+        </div>
+    </div>
+</body>
+<script src="scrpit.js"></script>
+
+</html>

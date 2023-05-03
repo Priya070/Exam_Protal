@@ -1,0 +1,127 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+  
+  <title>Admin</title>
+  <link rel="stylesheet" href="index_style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Image/iiitl_logo.png" alt="Logo">
+            <h2>IIIT <br>LUCKNOW</h2>
+        </div>
+        <div class="quotes">
+            <h2>welcome to the class welcome to the class</h2>
+        </div>
+        <div class="menu_profile">
+            <div class="navbar-profile" onclick="menuToggle();">
+                <img src="Image/profile.jpg" alt="Profile" >
+            </div>
+            <div class="profile_down">
+                <h3>John Doe</h3>
+                <ul>
+                    <li>Branch  : CSAI</li>
+                    <li>Semester: 3rd</li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="contain_all">
+        <aside>
+            <div class="sidebar">
+                <a href="admin_dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin_grades.html" >
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Grades from Faculties</h3>
+                </a>
+                <a href="admin_schedule.html">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Send Exam Schedule to Student</h3>
+                </a>
+                <a href="admin_register.html">
+                    <span class="material-icons-sharp">app_registration</span>
+                    <h3>Backpaper Registered Student</h3>
+                </a>
+                <a href="admin_seating.html">
+                    <span class="material-icons-sharp">airline_seat_recline_normal</span>
+                    <h3>Send Seating Arrangement</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main style="width: 65%;">
+            <h1>Dashboard</h1>
+            <div class="date">
+                <h3><span id="date"></span></h3>
+            </div>
+            <div class="insights" style="grid-template-columns: repeat(3 ,1fr);">
+                <a href="admin_grades.html">
+                    <div class="syllabus">    
+                        <div >
+                            <img src="Image/syllabus.png" >
+                        </div>
+                        <div>
+                            <h2>Grades from Faculties</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="admin_schedule.html">
+                    <div class="schedule">
+                        <div >
+                            <img src="Image/schedule.png" >
+                        </div>
+                        <div>
+                            <h2>Send Exam Schedule to Student</h2>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="admin_register.html">
+                    <div class="register">
+                        <div >
+                            <img src="Image/register.png" >
+                        </div>
+                        <div>
+                            <h2>Backpaper Registered Student</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="admin_seating.html">
+                    <div class="Seating">
+                        <div >
+                            <img src="Image/seat.png" >
+                        </div>
+                        <div>
+                            <h2>Send Seating Arrangement</h2>
+                        </div>
+                    </div>
+                </a>   
+                         
+            </div>
+        </main>
+        <div class="contain-rig" style="width: 15%;">
+
+        </div>
+    </div>
+</body>
+<script src="scrpit.js"></script>
+
+</html>

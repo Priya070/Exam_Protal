@@ -1,0 +1,119 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <title>Browser</title>
+    <link rel="stylesheet" href="index_style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Image/iiitl_logo.png" alt="Logo">
+            <h2>IIIT <br>LUCKNOW</h2>
+        </div>
+        <div class="quotes">
+            <h2>welcome to the class welcome to the class</h2>
+        </div>
+        <div class="menu_profile">
+            <div class="navbar-profile" onclick="menuToggle();">
+                <img src="Image/profile.jpg" alt="Profile">
+            </div>
+            <div class="profile_down">
+                <h3>John Doe</h3>
+                <ul>
+                    <li>Branch : CSAI</li>
+                    <li>Semester: 3rd</li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="contain_all">
+        <aside>
+            <div class="sidebar">
+                <a href="admin_dashboard.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin_grades.html">
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Grades from Faculties</h3>
+                </a>
+                <a href="admin_schedule.html" class="active">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Send Exam Schedule to Student</h3>
+                </a>
+                <a href="admin_register.html">
+                    <span class="material-icons-sharp">app_registration</span>
+                    <h3>Backpaper Registered Student</h3>
+                </a>
+                <a href="admin_seating.html">
+                    <span class="material-icons-sharp">airline_seat_recline_normal</span>
+                    <h3>Send Seating Arrangement</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main style="width: 55%;">
+            <h1></h1>
+            <div class="date">
+                <h3><span id="date"></span></h3>
+            </div>
+            <div class="insights" style="grid-template-columns: repeat(1 ,1fr)">
+
+                <a href="#">
+                    <div class="syllabus">
+                        <div class="wrapper">
+                            <div class="box">
+                                <div class="input-bx">
+                                    <h2 class="upload-area-title">Upload File</h2>
+                                    <form action="">
+                                        <input type="file" id="upload" accept=".doc,.docx,.pdf" hidden>
+                                        <label for="upload" class="uploadlabel">
+                                            <span class="material-icons-sharp">cloud_upload</span>
+                                            <p>Click To Upload</p>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="filewrapper">
+                            <h3 class="uploaded">Uploaded Documents</h3>
+                            <!-- <div class="showfilebox">
+                                <div class="left">
+                                    <span class="filetype">Pdf</span> <h3>Ravi Web.pdf</h3>
+                                </div>
+                                <div class="rightt">
+                                    <span>&#215;</span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="sub-btn">
+                            <button id="send" type="submit" class="btn">Submit</button>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        </main>
+        <div class="contain-rig" style="width: 20%;">
+
+        </div>
+        <script src="scrpit.js"></script>
+        <script src="admin-end-send.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+--color-primary: #7380ec;
+--color-danger: #ff7782;
+--color-success: 41f1b6;
+--color-warning: #ffbb55;
+--color-white: #fff;
+--color-info-dark:#6d839d; 
+--color-info-light: #dceleb;
+--color-dark: #3c3e4e;
+--color-light: Orgba(132, 139, 200, 0.18); 
+--color-primary-variant: #111e88;
+--color-dark-variant:#677483;
+--color-background: #eaeaf2;
+--card-border-radius: 2rem; 
+--border-radius-1: 0.4rem;
+--border-radius-2: 0.8rem;
+--border-radius-3: 1.2rem;
+--card-padding: 1.8rem; --padding-1: 1.2em;
+--box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    font-family: poppins,sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+a{
+    color: var(--color-dark);
+}
+img{
+    display: block;
+    width: 100%;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+} 
+#date{
+    font-size: 1rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 30px 20px;
+    background-color: #eaeaf2;
+    
+  }
+  .navbar-logo {
+    width: 14rem;
+    height: 4rem;
+    background-color: white;
+    padding: 10px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .navbar .quotes{
+    padding: 10px;
+    background-color: white;
+    border-radius: 2rem;
+    /* justify-content: center;
+    align-items: center; */
+  }
+
+  .navbar-logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 2rem;
+  }
+  span{
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .navbar-profile {
+    padding: 10px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .navbar-profile img {
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+    border-radius: 2rem;
+  }
+
+.contain_all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #eaeaf2;
+    gap: 2rem;
+
+}
+/* dropdown */
+
+nav .profile_down{
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 1rem; 
+    width: 13.6rem; 
+    transition: 0.5s;
+    opacity: 0; 
+    right: 10px;
+}
+nav .active{
+    opacity: 1;
+}
+nav .profile_down h3{
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 650;
+    padding-bottom: 0.7rem; 
+    text-align: center;
+}
+nav .profile_down ul li{
+    list-style: none;
+    padding: 5px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    direction: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/*  */
+
+
+  /* sidebar */
+
+
+aside{
+    height: 80vh;   
+    width: 14%;  
+}
+  aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+}
+aside h3{
+    font-weight: 500;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+}
+aside .sidebar a.active{
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+aside .sidebar a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+/* main */
+main{
+    width: 50%;
+    height: 80vh;
+
+}
+main .date{
+    display: inline-block;
+    background: var(--color-light);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+}
+main .date input[type="date"]{
+    background: transparent;
+    color: var(--color-dark);
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 1.6rem;
+    /* margin-top: 1cm; */
+}
+main .insights >a {
+    background:var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;  
+}
+main .insights img{  
+    height: 2cm;
+    width: 2cm;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+main .insights h2{
+    text-align: center;
+}
+/*  */
+main .insights > a:hover{
+    box-shadow: none;
+}
+
+
+/* right */
+.contain-rig{
+    width: 30%;
+    height: 80vh;
+}
+.contain-rig{
+    margin-top: 2rem;
+}
+.contain-rig .chat{
+    background:  whitesmoke;
+    margin-top: 3cm;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-3);
+
+}
+.contain-rig .chat .header{
+    color: var(--color-dark);
+    background-color: rgb(216, 215, 246) ;
+    height: 5rem;
+    text-align: center;
+    justify-self: center;
+    border-radius: var(--border-radius-3);
+}
+.contain-rig .chat .header h1{
+    margin-top: 1rem;
+}
+.contain-rig .chat .body{
+    height: 26rem;
+}
+
+.contain-rig .chat .send form{
+    display: flex;
+}
+.contain-rig .chat .send form input{
+    flex: 1;
+    height: 4rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius-3);
+    background-color: rgb(237, 237, 252)
+    
+   
+}
+.contain-rig .chat .send form button{
+    width: 5rem;
+    font-size: 1.3rem;
+    border-radius: var(--border-radius-3);
+    cursor: pointer;
+}

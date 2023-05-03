@@ -1,0 +1,100 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+  
+  <title>Browser</title>
+  <link rel="stylesheet" href="index_style_upload.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Image/iiitl_logo.png" alt="Logo">
+            <h2>IIIT <br>LUCKNOW</h2>
+        </div>
+        <div class="quotes">
+            <h2>welcome to the class welcome to the class</h2>
+        </div>
+        <div class="menu_profile">
+            <div class="navbar-profile" onclick="menuToggle();">
+                <img src="Image/profile.jpg" alt="Profile" >
+            </div>
+            <div class="profile_down">
+                <h3>John Doe</h3>
+                <ul>
+                    <li>Subject : Compiler Design</li>
+                    <li>Branch  : CSAI</li>
+                    <li>Semester: 3rd</li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="contain_all">
+        <aside>
+            <div class="sidebar">
+                <a href="teacher_dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="teacher_syllabus.html" >
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Send Syllabus</h3>
+                </a>
+                <a href="teacher_results.html">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Send Results</h3>
+                </a>
+                
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main style="width: 60%;">
+            <h1>Dashboard</h1>
+            <div class="date">
+                <h3><span id="date"></span></h3>
+            </div>
+            <div class="insights" style="grid-template-columns: repeat(2 ,1fr);">
+                <a href="teacher_syllabus.html">
+                    <div class="syllabus">    
+                        <div >
+                            <img src="Image/syllabus.png" >
+                        </div>
+                        <div>
+                            <h2>Send Syllabus to Student </h2>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="teacher_results.html">
+                    <div class="Seating">
+                        <div >
+                            <img src="Image/result.png" >
+                        </div>
+                        <div>
+                            <h2>Send Results to Admin</h2>
+                        </div>
+                    </div>
+                </a>   
+                         
+            </div>
+        </main>
+        <div class="contain-rig" style="width: 20%;">
+        </div>
+    </div>
+</body>
+<script src="scrpit.js"></script>
+
+</html>

@@ -1,0 +1,99 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+  
+  <title>Browser</title>
+  <link rel="stylesheet" href="index_style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Image/iiitl_logo.png" alt="Logo">
+            <h2>IIIT <br>LUCKNOW</h2>
+        </div>
+        <div class="quotes">
+            <h2>welcome to the class welcome to the class</h2>
+        </div>
+        <div class="menu_profile">
+            <div class="navbar-profile" onclick="menuToggle();">
+                <img src="Image/profile.jpg" alt="Profile" >
+            </div>
+            <div class="profile_down">
+                <h3>John Doe</h3>
+                <ul>
+                    <li>Branch  : CSAI</li>
+                    <li>Semester: 3rd</li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="contain_all">
+        <aside>
+            <div class="sidebar">
+                <a href="admin_dashboard.html" >
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin_grades.html" >
+                    <span class="material-icons-sharp">library_books</span>
+                    <h3>Grades from Faculties</h3>
+                </a>
+                <a href="admin_schedule.html" class="active">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Send Exam Schedule to Student</h3>
+                </a>
+                <a href="admin_register.html">
+                    <span class="material-icons-sharp">app_registration</span>
+                    <h3>Backpaper Registered Student</h3>
+                </a>
+                <a href="admin_seating.html">
+                    <span class="material-icons-sharp">airline_seat_recline_normal</span>
+                    <h3>Send Seating Arrangement</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main >
+            <h1>Send Exam Schedule to Student</h1>
+            <div class="date">
+                <h3><span id="date"></span></h3>
+            </div>
+            <div class="insights">
+                
+                <a href="admin_mid_sem.html">
+                    <div class="MSE">    
+                        <div>
+                            <h2>MID-Semester</h2>
+                        </div>
+                    </div>
+                </a>
+                <a href="admin_end_sem.html">
+                    <div class="ESE">
+                        <div>
+                            <h2>End-Semester</h2>
+                        </div>
+                    </div>
+                </a>             
+            </div>
+        </main>
+        <div class="contain-rig">
+
+        </div>
+    </div>
+</body>
+<script src="scrpit.js"></script>
+</html>

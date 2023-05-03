@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style_syllabus.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="Image/iiitl_logo.png">
+                    <h2 >IIIT LUCKNOW</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+        </aside>
+        <main>
+            <h1>Select Class</h1>
+            <div class="date">
+                <!-- <h3><span id="date"></span></h3> -->
+            </div>
+            <div class="insights">
+
+                <a href="#">
+                    <div class="exam_register">    
+                        <div>
+                            <h2>Login To Your Account</h2>
+                        </div>
+                        <div class="form">
+                            
+                            <div class="input_filed">
+                                <label>Email Address</label>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input_filed">
+                                <label>Password</label>
+                                <input type="text" class="input">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="login"> 
+                        <h2>Login</h2>
+                    </div>
+                </a>
+                           
+            </div>
+        </main>
+    </div>
+    
+</body>
+<script>
+    var dt = new Date();
+    var mo=dt.getMonth()+1;
+    document.getElementById('date').innerHTML=dt.getDate()+" / "+mo+" / "+dt.getFullYear();
+</script>
+</html>
