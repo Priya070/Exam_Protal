@@ -21,7 +21,8 @@ window.addEventListener('load', () => {
         let password = document.getElementById('password').value;
         console.log('skdjfef')
         let data = await fetch('/api/login', {
-            method: "POST", headers: {
+            method: "POST",
+            headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({

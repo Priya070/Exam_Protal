@@ -1,51 +1,1457 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+	<title>Exam Portal | IIITL</title>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- mobile metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login</title>
-  <link rel="stylesheet" type="text/css" href="/unwanted/login.css">
-</head>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="iiitl_logo.png" type="image/gif">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<style type="text/css">
+		* {
+			box-sizing: border-box !important
+		}
+
+		html {
+			scroll-behavior: smooth
+		}
+
+		body {
+			color: #353535;
+			font-size: 14px;
+			font-family: 'Raleway', sans-serif;
+			line-height: 1.80857;
+			font-weight: 400;
+			font-weight: bold
+		}
+
+		a {
+			color: #1f1f1f;
+			text-decoration: none !important;
+			outline: none !important;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-ms-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			letter-spacing: 0;
+			font-weight: normal;
+			position: relative;
+			padding: 0 0 10px 0;
+			font-weight: normal;
+			line-height: normal;
+			color: #111;
+			margin: 0;
+			font-family: 'Poppins', sans-serif
+		}
+
+		h1 {
+			font-size: 24px
+		}
+
+		h2 {
+			font-size: 22px
+		}
+
+		h3 {
+			font-size: 18px
+		}
+
+		h4 {
+			font-size: 16px
+		}
+
+		h5 {
+			font-size: 14px
+		}
+
+		h6 {
+			font-size: 13px
+		}
+
+		*,
+		*::after,
+		*::before {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		h1 a,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a {
+			color: #212121;
+			text-decoration: none !important;
+			opacity: 1
+		}
+
+		button:focus {
+			outline: 0
+		}
+
+		ul,
+		li,
+		ol {
+			margin: 0;
+			padding: 0;
+			list-style: none
+		}
+
+		p {
+			margin: 0;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px
+		}
+
+		a {
+			color: #222;
+			text-decoration: none;
+			outline: none !important
+		}
+
+		a,
+		.btn {
+			text-decoration: none !important;
+			outline: none !important;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-ms-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out
+		}
+
+		img {
+			max-width: 100%;
+			height: auto
+		}
+
+		:focus {
+			outline: 0
+		}
+
+		.owl-dots {
+			text-align: center;
+			margin-top: 20px
+		}
+
+		.owl-dot {
+			display: inline-block;
+			height: 15px !important;
+			width: 15px !important;
+			background-color: #222 !important;
+			opacity: .8;
+			border-radius: 50%;
+			margin: 0 5px
+		}
+
+		.owl-dot.active {
+			background-color: #161e45 !important
+		}
+
+		.newleft {
+			margin-left: 30px
+		}
+
+		.link-area {
+			position: fixed;
+			bottom: 20px;
+			left: 20px;
+			padding: 15px;
+			border-radius: 40px;
+			background: tomato
+		}
+
+		.link-area a {
+			text-decoration: none;
+			color: #fff;
+			font-size: 25px
+		}
+
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: 600 !important;
+			font-family: 'Poppins', sans-serif;
+			color: #212529
+		}
+
+		.h5-title {
+			font-size: 17px
+		}
+
+		.h2.title-main {
+			font-size: 2.5rem
+		}
+
+		.text-bold {
+			font-weight: 700 !important
+		}
+
+		h5 {
+			font-size: 16px !important
+		}
+
+		.h1,
+		h1 {
+			font-size: 2.5rem
+		}
+
+		.title-hr {
+			width: 40px;
+			border-top: 3px solid #ffff;
+			margin-left: 0;
+			margin-top: 0rem
+		}
+
+		.text-right {
+			float: right
+		}
+
+		.hr-center {
+			margin-left: auto
+		}
+
+		.hr-pr-100 {
+			width: 100%
+		}
+
+		.sevice-height {
+			height: 380px
+		}
+
+		.shadow1 {
+			box-shadow: 0 rgba(0, 0, 0, 0.35);
+			transition: transform .5s
+		}
+
+		.shadow1:hover {
+			transform: scale(1.02);
+			transition: transform .5s
+		}
+
+		.service-item:hover {
+			transform: scale(1.05);
+			transition: transform .5s
+		}
+
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			font-weight: bold
+		}
+
+		.imghover {
+			transition: all .4s
+		}
+
+		.service-section {
+			padding: 30px 0 60px
+		}
+
+		#Cult-V {
+			background-size: contain;
+			margin-bottom: -170px
+		}
+
+		.h31 {
+			font-size: 15px
+		}
+
+		.about-right {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover
+		}
+
+		.h-100 {
+			height: auto !important;
+			min-height: 100%
+		}
+
+		.padding-section {
+			padding: 30px 0 15px
+		}
+
+		.right-dot {
+			border-right: 2px solid #ddd
+		}
+
+		#register_button.btn-primary:hover {
+			color: #fff;
+			background-color: #e41d43;
+			border-color: #e41d43
+		}
+
+		#register_button.btn-primary {
+			color: #fff;
+			background-color: #243d77;
+			border-color: #243d77
+		}
+
+		a {
+			color: #353535 !important;
+			text-decoration: none;
+			background-color: transparent
+		}
+
+		a:hover {
+			color: #243d77 !important;
+			text-decoration: none;
+			background-color: transparent
+		}
+
+		.btn1.btn-red {
+			background-color: #fff;
+			color: #161d47;
+			padding-left: 16px;
+			padding-right: 16px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			font-size: 20px
+		}
+
+		.btn1.btn-red:hover {
+			background-color: #e41d43;
+			color: #ffff !important
+		}
+
+		.social-media-footer.circle li a i {
+			color: #000 !important
+		}
+
+		h3.thicker {
+			font-weight: 500 !important
+		}
+
+		.col-12 {
+			padding-right: 15px;
+			padding-left: 0 !important
+		}
+
+		.btn-secondary {
+			color: #fff !important
+		}
+
+		.btn-secondary:hover {
+			color: #fff !important;
+			background-color: #5a6268;
+			border-color: #545b62
+		}
+
+		.btn-blue {
+			background-color: #161d47;
+			color: #fff;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 20px
+		}
+
+		.btn-blue:hover {
+			background-color: #fdcb16;
+			color: #ffff
+		}
+
+		.applybg {
+			padding: 5rem 0 3rem;
+			background: linear-gradient(to right, rgba(40, 50, 96, 0.85), #637bb8e6), url('https://bbd.campusenrol.com/storage/asset_library/2022/04/image/jpeg/bbdu_banner_course-min-1-1.jpg') no-repeat;
+			background-position-x: 0;
+			background-position-y: 0;
+			background-size: auto;
+			background-size: cover;
+			background-position: center center
+		}
+
+		.about {
+			padding: 20px 0 60px
+		}
+
+		.padding-section-equal-3 {
+			padding-top: 1rem;
+			padding-bottom: 3rem
+		}
+
+		.max-height-400 {
+			max-height: 400px
+		}
+
+		.max-height-500 {
+			max-height: 500px
+		}
+
+		.max-height-450 {
+			max-height: 450px
+		}
+
+		.max-height-300 {
+			max-height: 300px
+		}
+
+		.max-height {
+			max-height: 275px
+		}
+
+		.btn-apply {
+			background-color: #4591ce;
+			color: white
+		}
+
+		.btn-apply:hover {
+			background-color: #fdcb16;
+			color: white
+		}
+
+		.heading-title {
+			font-size: 42px;
+			line-height: 40px
+		}
+
+		.sub-para {
+			font-size: 18px;
+			line-height: 24px;
+			margin: 10px 0 20px 0
+		}
+
+		.text-white {
+			color: #fff !important
+		}
+
+		.position-relative {
+			position: relative !important
+		}
+
+		.gray-filter {
+			filter: grayscale()
+		}
+
+		.heading {
+			font-weight: 700;
+			display: -ms-inline-grid;
+			display: inline-grid;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			position: relative;
+			padding: 0 0 5px 0;
+			text-align: center;
+			color: #343a40
+		}
+
+		.heading1 {
+			font-weight: 700;
+			display: -ms-inline-grid;
+			display: inline-grid;
+			font-size: 34px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			position: relative;
+			padding: 0 0 13px 0;
+			text-align: center;
+			color: #343a40
+		}
+
+		.heading1::before {
+			content: "";
+			position: absolute;
+			height: 4px;
+			width: 100px;
+			background: #e41d43;
+			border-radius: 4px;
+			left: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto
+		}
+
+		.heading::before {
+			content: "";
+			position: absolute;
+			height: 4px;
+			width: 100px;
+			background: #243d77;
+			border-radius: 4px;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto
+		}
+
+		.heading span {
+			font-weight: 700;
+			font-size: 35px;
+			letter-spacing: normal;
+			text-transform: capitalize;
+			padding-top: 4px
+		}
+
+		.heading1::after {
+			content: "";
+			position: absolute;
+			height: 15px;
+			width: 15px;
+			background: #fff;
+			border: 4px solid #e41d43;
+			border-radius: 50%;
+			left: 40px;
+			bottom: -6px;
+			-webkit-animation: headings 3s infinite;
+			animation: headings 3s infinite;
+			margin: auto
+		}
+
+		.social-media-footer.circle li a i:hover {
+			color: #e41d43 !important
+		}
+
+		.heading span b {
+			background: linear-gradient(135deg, #243d77 0, #e41d43 100%);
+			background-clip: border-box;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent
+		}
+
+		.client {
+			padding: 10px;
+			border: 1px solid #fff;
+			background-color: #fff
+		}
+
+		.client img {
+			height: 100px;
+			object-fit: contain;
+			object-position: center
+		}
+
+		.img-hover {
+			transition: all .2s ease-in
+		}
+
+		.img-hover:hover {
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1)
+		}
+
+		.stats_section {
+			position: relative
+		}
+
+		.section {
+			padding: 50px 0
+		}
+
+		.program_offered {
+			text-align: center
+		}
+
+		.section {
+			padding: 50px 0
+		}
+
+		.left1 {
+			text-align: left
+		}
+
+		.left2 {
+			text-align: right
+		}
+
+		@media screen and (min-width:320px) and (max-width:767px) {
+			.left1 {
+				text-align: center;
+				margin-bottom: 5px
+			}
+
+			.intro-content {
+				padding-top: 40px !important;
+				padding-bottom: 20px !important
+			}
+
+			.logo {
+				width: 160px !important
+			}
+
+			.newhed {
+				padding: 0 5px !important
+			}
+
+			.left2 {
+				text-align: center;
+				margin-top: 2px
+			}
+
+			.newsize {
+				font-size: 15px;
+				line-height: 1.2
+			}
+
+			.newcolor {
+				color: #ddd !important
+			}
+
+			#content_block_03 .content-box .single-progress-box {
+				margin-right: 0 !important
+			}
+
+			.service-section {
+				padding: 30px 0 71px
+			}
+
+			.displayonphn {
+				display: none
+			}
+		}
+
+		.footer {
+			padding: 30px 0 0;
+			background-color: #243d77;
+			color: #fff;
+			background-position: bottom center;
+			background-size: cover;
+			height: auto
+		}
+
+		.footer p,
+		.footer p a {
+			font-size: 14px;
+			color: #ddd;
+			font-weight: 300
+		}
+
+		.footer p {
+			padding-bottom: 0;
+			line-height: 25px
+		}
+
+		.quick-links {
+			padding: 0;
+			padding-left: 0;
+			list-style: none;
+			font-size: 90%;
+			margin-bottom: 0;
+			font-weight: 300
+		}
+
+		.quick-links.contact-details li,
+		.quick-links.contact-details li a {
+			padding: 5px 0;
+			color: #ddd !important
+		}
+
+		.quick-links.contact-details li,
+		.quick-links.contact-details li a:hover {
+			padding: 5px 0;
+			color: #e41d43 !important
+		}
+
+		.mb-4,
+		.my-4 {
+			margin-bottom: 1.5rem !important
+		}
+
+		.quick-links li {
+			font-size: 14px;
+			font-weight: 300
+		}
+
+		.footer h2 {
+			border-bottom: 0;
+			padding-bottom: 0
+		}
+
+		.mt-4,
+		.my-4 {
+			margin-top: 1.5rem !important
+		}
+
+		hr.footer-hr {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			border: 0;
+			border-top: 1px solid rgba(255, 255, 255, .1)
+		}
+
+		.mr-5,
+		.mx-5 {
+			margin-right: 3rem !important
+		}
+
+		.footer p,
+		.footer p a {
+			font-size: 14px;
+			color: #ddd;
+			font-weight: 300;
+			margin-top: 0
+		}
+
+		.d-inline {
+			display: inline !important
+		}
+
+		.justify-content-end {
+			-ms-flex-pack: end !important;
+			justify-content: flex-end !important
+		}
+
+		.newcolor {
+			color: #ddd !important
+		}
+
+		@media screen and (min-width:320px) and (max-width:767px) {
+			.m-menu__link-text {
+				font-size: 15px
+			}
+
+			.heading-title {
+				font-size: 24px;
+				line-height: 40px
+			}
+
+			.cu-btn {
+				padding: 5px 8px !important
+			}
+
+			.cu-btn {
+				font-size: 12px;
+				padding: 10px 10px
+			}
+
+			.w-100 {
+				width: 100% !important
+			}
+
+			.w-100 {
+				width: 100% !important
+			}
+
+			.heading span {
+				font-weight: 600;
+				font-size: 26px;
+				letter-spacing: normal;
+				text-transform: capitalize;
+				padding-top: 4px;
+				margin-top: 5px
+			}
+
+			.right-dot {
+				border-right: 0
+			}
+
+			.newleft {
+				margin-left: 0
+			}
+
+			.heading1 span {
+				font-weight: 700;
+				font-size: 29px;
+				letter-spacing: normal;
+				text-transform: capitalize
+			}
+
+			.h2.title-main {
+				font-size: 26px
+			}
+
+			.heading {
+				margin-bottom: 10px
+			}
+		}
+
+		.top-inner {
+			padding-bottom: 0
+		}
+
+		.max-height-300 {
+			max-height: 300px;
+			overflow: auto
+		}
+
+		.chooseus-section {
+			position: relative;
+			padding: 50px 0
+		}
+
+		.bg-color-1 {
+			background: #eef2fe
+		}
+
+		.text-justify {
+			text-align: justify !important
+		}
+
+		.text-white {
+			color: #fff !important
+		}
+
+		.pb-8,
+		.py-8 {
+			padding-bottom: 7.5rem !important
+		}
+
+		.pt-8,
+		.py-8 {
+			padding-top: 4.5rem !important
+		}
+
+		.position-relative {
+			position: relative !important
+		}
+
+		.card.card1 {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			min-width: 0;
+			word-wrap: break-word;
+			background-color: #fff;
+			background-clip: border-box;
+			border: 1px solid rgba(0, 0, 0, .125);
+			border-radius: .25rem;
+			border: 4px solid #e41d43
+		}
+
+		.mt-5,
+		.my-5 {
+			margin-top: 3rem !important
+		}
+
+		@media screen and (max-width:1366px) {
+			.intro-content {
+				z-index: 2;
+				position: relative;
+				padding-top: 0 !important;
+				padding-bottom: 0 !important
+			}
+
+			.visible-on-mobile {
+				display: block
+			}
+		}
+
+		.intro-content {
+			z-index: 2;
+			position: relative;
+			padding-top: 90px;
+			padding-bottom: 72px
+		}
+
+		.mb-3,
+		.my-3 {
+			margin-bottom: 1rem !important
+		}
+
+		.display-4 {
+			font-size: 3.5rem
+		}
+
+		.mb-4,
+		.my-4 {
+			margin-bottom: 1.5rem !important
+		}
+
+		.lead {
+			font-size: 1.25rem;
+			font-weight: 400
+		}
+
+		.text-white {
+			color: #fff !important
+		}
+
+		.bg-overlay-primary:after {
+			content: " ";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: rgba(40, 50, 96, 0.85);
+			z-index: 2
+		}
+
+		.bannerbg {
+			padding: 5rem 0 3rem;
+			background: linear-gradient(to right, #243d77, #637bb8e6), url('') no-repeat;
+			background-position-x: 0;
+			background-position-y: 0;
+			background-size: auto;
+			background-size: cover;
+			background-position: center center
+		}
+
+		.img-fluid {
+			max-width: 100% !important;
+			height: auto
+		}
+
+		.img-cover {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0
+		}
+
+		.card-body {
+			flex: 1 1 auto;
+			min-height: 1px;
+			padding: 1.25rem
+		}
+
+		.form-group {
+			margin-bottom: 10px
+		}
+
+		.btn-success {
+			color: #fff;
+			background-color: #2d355d;
+			border-color: #2d355d
+		}
+
+		.btn-success:hover {
+			color: #fff;
+			background-color: #bf8f28;
+			border-color: #bf8f28
+		}
+
+		h3.thicker {
+			font-weight: 500
+		}
+
+		.headerbg {
+			background: #fbfbfd;
+			box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .06)
+		}
+
+		.newform {
+			width: 500px;
+			float: right
+		}
+
+		.unique-section {
+			padding-right: var(--bs-gutter-x, .75rem);
+			padding-left: var(--bs-gutter-x, .75rem)
+		}
+
+		.gray-filter {
+			filter: grayscale()
+		}
+
+		#content_block_03 .sec-title .title i {
+			background: linear-gradient(90deg, var(--c1, #e41d43), var(--c2, #243d77) 50%, var(--c1, #e41d43)) var(--x, 0)/200%
+		}
+
+		.sec-title .title i {
+			line-height: 35px;
+			color: #fff;
+			text-align: center;
+			position: relative
+		}
+
+		.sec-title .title {
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 400
+		}
+
+		.sec-title .title {
+			position: relative;
+			display: inline-block;
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 400;
+			background: #fff;
+			padding: 5px 15px 6px 42px;
+			margin-bottom: 18px;
+			border-radius: 30px;
+			box-shadow: 0 0 10px rgb(0 0 0 / 10%)
+		}
+
+		#content_block_03 .content-box {
+			position: relative;
+			display: block;
+			margin-left: -10px
+		}
+
+		#content_block_03 .content-box .single-progress-box p {
+			position: relative;
+			margin-top: 4px;
+			font-size: 16px
+		}
+
+		.text p {
+			font-size: 16px;
+			line-height: 24px;
+			color: #444;
+			margin: 0;
+			font-weight: 400
+		}
+
+		.bg-grayish {
+			background: #eef2fe;
+			padding: 50px 0 !important
+		}
+
+		#image_block_03 .image-box .image img {
+			position: relative;
+			width: 100% !important
+		}
+
+		.sec-title {
+			position: relative;
+			display: block
+		}
+
+		#content_block_03 .content-box {
+			position: relative;
+			display: block;
+			margin-left: -10px
+		}
+
+		.text {
+			font-size: 16px;
+			line-height: 24px;
+			color: #444;
+			margin: 0;
+			font-weight: 400
+		}
+
+		.inner-box {
+			margin-top: 15px
+		}
+
+		#content_block_03 .content-box .single-progress-box {
+			position: relative;
+			max-width: 122px;
+			width: 100%;
+			float: left;
+			margin-right: 15px
+		}
+
+		#content_block_03 .content-box .single-progress-box .box {
+			position: relative;
+			max-width: 145px;
+			width: 100%;
+			text-align: center
+		}
+
+		.new-key-modules .lower-content h3 {
+			font-size: 16px !important;
+			line-height: 20px !important;
+			font-weight: bolder;
+			margin-bottom: 10px
+		}
+
+		#content_block_03 .content-box .single-progress-box .piechart {
+			position: relative
+		}
+
+		.single-progress-box:nth-child(1) .piechart {
+			border-color: #243d77
+		}
+
+		.single-progress-box:nth-child(2) .piechart {
+			border-color: #e41d43
+		}
+
+		.single-progress-box:nth-child(4) .piechart {
+			border-color: #e41d43
+		}
+
+		.js-tilt img {
+			transition: .5s
+		}
+
+		.js-tilt:hover img {
+			-webkit-transform: rotate(-1deg) scale(1.1);
+			transform: rotate(-1deg) scale(1.1)
+		}
+
+		.sec-title h3 {
+			position: relative;
+			font-size: 32px;
+			line-height: 47px;
+			color: #161616;
+			font-weight: 900;
+			margin-left: -9px
+		}
+
+		.sec-title .title i {
+			position: absolute;
+			left: 0;
+			top: -5px;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			color: #fff;
+			text-align: center;
+			border-radius: 50%
+		}
+
+		.single-progress-box:nth-child(3) .piechart {
+			border-color: #2d355d
+		}
+
+		#content_block_03 .content-box .single-progress-box .piechart span {
+			position: absolute;
+			display: flex;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			font-size: 16px;
+			line-height: 38px;
+			font-weight: 900;
+			color: #161616;
+			text-align: center
+		}
+
+		.piechart {
+			border-radius: 50%;
+			border: 10px solid red;
+			border-top-color: red;
+			border-right-color: red;
+			border-bottom-color: red;
+			border-left-color: red;
+			height: 120px;
+			width: 120px;
+			box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15) !important;
+			transition: .5s
+		}
+
+		.piechart:hover {
+			-webkit-transform: rotate(-2deg) scale(1.1);
+			transform: rotate(-2deg) scale(1.1);
+			cursor: pointer
+		}
+
+		@media screen and (min-width:320px) and (max-width:767px) {
+			#content_block_03 .row {
+				padding: 0 15px
+			}
+
+			.newform {
+				width: 100%;
+				float: none
+			}
+
+			#content_block_03 .content-box {
+				margin-left: 0
+			}
+
+			#image_block_03 .image-box .pattern-layer {
+				display: none
+			}
+
+			#image_block_03 .image-box {
+				margin: 0;
+				margin-bottom: 35px
+			}
+
+			#content_block_03 .content-box .single-progress-box {
+				max-width: initial;
+				min-height: max-content;
+				margin-top: 0
+			}
+
+			#content_block_03 .content-box .single-progress-box p {
+				font-size: 14px
+			}
+
+			#content_block_03 .content-box .inner-box {
+				display: flex;
+				justify-content: space-between
+			}
+
+			#content_block_03 .content-box .single-progress-box .piechart span {
+				font-size: 10px
+			}
+
+			.piechart {
+				height: 60px;
+				width: 60px;
+				margin: auto
+			}
+
+			.dfac {
+				display: block
+			}
+		}
+
+		#content_block_03 .content-box .single-progress-box p {
+			position: relative;
+			margin-top: 4px
+		}
+
+		.w-100 {
+			width: 100% !important
+		}
+
+		.newhed {
+			padding: 0 80px
+		}
+
+		.text-dark {
+			color: #212529 !important
+		}
+
+		.fw-900 {
+			font-weight: 900 !important
+		}
+
+		.w-lg-80px {
+			width: 80px !important
+		}
+
+		.fs-19 {
+			font-size: 19px !important
+		}
+
+		.btn-theme3 span {
+			color: #fff
+		}
+
+		.bottom-n2px {
+			bottom: -2px !important
+		}
+
+		.d-block {
+			display: block !important
+		}
+
+		.description ul {
+			list-style: none;
+			list-style: url("images/arrow.png");
+			list-style-type: disc
+		}
+
+		.description ul li {
+			list-style-type: square;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			text-align: justify
+		}
+
+		.iti {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			font-size: 12px !important
+		}
+
+		.logo {
+			width: 145px
+		}
+
+		.btn-primary {
+			color: #fff;
+			background-color: #161d47;
+			border-color: #161d47
+		}
+
+		.btn-primary:hover {
+			color: #fff;
+			background-color: #b88513;
+			border-color: #b88513
+		}
+
+		ul.social-media-footer {
+			display: block !important;
+			margin: initial;
+			overflow: auto;
+			padding: 0
+		}
+
+		.social-media-footer li {
+			list-style-type: none;
+			float: left
+		}
+
+		.social-media-footer.circle li a {
+			background-color: #fff;
+			margin-right: .3rem;
+			overflow: auto;
+			height: 26px;
+			width: 26px;
+			padding: 3px 0 0;
+			border-radius: 4px;
+			text-align: center
+		}
+
+		.social-media-footer.circle li a i {
+			color: #000;
+			background: transparent;
+			padding-top: 2px;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			margin: 0;
+			font-size: 17px;
+			font-weight: 300
+		}
+
+		@media(min-width:992px) {
+			.pe-lg-5 {
+				padding-right: 3rem !important
+			}
+		}
+	</style>
+	<style>
+		.btn-red:hover {
+			border-color: #e41d43 !important
+		}
+
+		#register_button {
+			color: #fff;
+			background-color: #161d47;
+		}
+
+		#register_button.btn-primary:hover {
+			color: #fff;
+			background-color: #e41d43;
+			border-color: #e41d43;
+		}
+
+		li a {
+			color: #161d47 !important;
+		}
+
+		.course_list li.main_submenu_list>a:first-child {
+			font-weight: bold;
+			font-size: 20px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://bbd.campusenrol.com/intl-tel-input/css/intlTelInput.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://bbd.campusenrol.com/select2/select2-bootstrap4.min.css" rel="stylesheet">
+	<style>
+		.iti {
+			display: block;
+		}
+	</style>
+	<!-- <link href="https://static.superbot.works/chatbot/style.min.css?v=20200109" rel="stylesheet" type="text/css"><style>#sb_container a.sb-chat-btn:hover{background:#2E599F !important;},#sb_container a.sb-chat-btn:active{background:#2E599F !important;}, #sb_container a.sb-chat-btn:visited{background:#2E599F !important;}</style></head> -->
+
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 col-sm-12">	
-				<div class="form">
-			
-					<form action="#">
+	<header>
 
-						<h1>Login To Your Account</h1>
+		<nav class="navbar navbar-expand-sm bg-white navbar-dark headerbg fixed-top">
 
-						<div class="input-group col-md-8 col-md-offset-2">
-							<input id="email" type="email" name="email" class="input email" autocomplete="off">
-							<label>E-Mail Address</label>
-						</div>
-					
-						<div class="input-group col-md-8 col-md-offset-2">
-							<input id="password" type="password" name="password" class="input password">
-							<label>Password</label>
-						</div>
-						
-						<div class="input-group">
-							<div class="col-md-4 col-md-offset-4">
-								
-								<button id="loginbtn" type="button">
-									LOGIN
-								</button>
-														
+			<div class="container-fluid newhed">
+				<div class="col-lg-6 col-5 align-self-left animated fadeInLeft go">
+					<a class="navbar-brand" href="#"><img src="iiitl_logo.png" class="logo"></a>
+				</div>
+				<!-- <div class="col-lg-6 col-7  animated growIn go ">
+					<ul class="navbar-nav mt-2 mt-lg-0 ml-auto justify-content-end">
+						<ul class="social-media-footer circle">
+							<li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						</ul>
+					</ul>
+				</div> -->
+			</div>
+		</nav>
+	</header>
+	<div class=" intro py-8  position-relative text-white bannerbg">
+		<div class="intro-content ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 align-self-center pt-5 pe-lg-5">
+						<div class="row mx-0 pb-md-4 ">
+							<div class="col-12 heading1 fs-md-14 mb-2 fs-12 text-white" style="text-align: left;"><span
+									class="fs-xl-32 fs-lg-28 fs-md-24 fs-20">
+									Exam Portal
+								</span>
 							</div>
 						</div>
-						
-						<div class="forgot">
-							<a href="#">Forgot Password?</a>
+						<p class="lead mb-4 mt-2 text-white">
+							Exam portal is a platform to make college exam handy where everything is combined. Where student can see
+							syllabus, schedule, seating arrangement, result, and even register for backpaper. 
+							Teacher can upload syllabus for student and send result to admin.
+							Admin can send schedule, seating arrangement, result, etc and can see who regitered for backpaper and notify them information regarding their exam.
+
+						</p>
+					</div>
+					<!-- /.col-md-6 -->
+					<div class="col-md-6 justify-content-end pt-5">
+						<div class="justify-content-end newform">
+							<div class="card card1 ">
+								<div class="card-body text-dark">
+									<div class="row mx-0 mb-3">
+										<h3 class="d-none invisible">Login In</h3>
+										<div class="col-12 heading fs-md-14 fs-12 center"><span
+												class="fs-xl-32 fs-lg-28 fs-md-24 fs-20">
+												LOG <b>IN</b></span>
+										</div>
+									</div>
+									<div id="form_data">
+										<form class="form" id="kt_login"
+											action="https://bbd.campusenrol.com/registration/sendotp" method="POST"
+											data-parsley-validate="">
+											<input type="hidden" name="_token"
+												value="wNKlQeKBEZlQCwFF5YWZU6klLyd6WyUGBTDSZe7r">
+											<div class="form-group">
+												<input id="email" type="email" class="form-control form-control " name="email"
+													placeholder="Email Address" value="">
+											</div>
+											<div class="form-group">
+												<input id="password" type="password" class="form-control form-control "
+													name="password" placeholder="Password" value="">
+											</div>
+											<!-- <small id="tos_text">Forgot password</small> -->
+											<br>
+											<small><a href="#" style="color:#4690cd;"></a></small>
+											<button type="submit" class="btn btn-primary mt-4" id="loginbtn"
+												style="border:none;">Submit</button>
+										</form>
+									</div>
+								</div>
+							</div>
 						</div>
-					</form>
+					</div>
+					<script src="/unwanted/login.js" type="application/JavaScript"></script>
 				</div>
 			</div>
 		</div>
 	</div>
+</body>
 
-</body> 
-<script src="/unwanted/login.js" type="application/JavaScript"></script>
 </html>
-

@@ -30,22 +30,22 @@ const excelFilter = (req, file, cb) => {
 const upload = multer({ storage: storage, fileFilter: excelFilter });
 
 // define the route for handling file uploads
-router.post("/teacherUploadResult", upload.single("result"), (req, res) => {
-  // read the uploaded Excel sheet and do something with the data
-  const workbook = xlsx.readFile(req.file.path);
-  const result = workbook.SheetNames[0]; // assuming you want to read the first sheet
-  const worksheet = workbook.Sheets[result];
-  const json = xlsx.utils.sheet_to_json(worksheet);
+// router.post("/teacherUploadResult", upload.single("result"), (req, res) => {
+//   // read the uploaded Excel sheet and do something with the data
+//   const workbook = xlsx.readFile(req.file.path);
+//   const result = workbook.SheetNames[0]; // assuming you want to read the first sheet
+//   const worksheet = workbook.Sheets[result];
+//   const json = xlsx.utils.sheet_to_json(worksheet);
 
-  // do something with the JSON data, e.g. save it to a database
-  const newResult = Result({
-    grades: json,
-  });
-  newResult.save();
-  console.log(json);
+//   // do something with the JSON data, e.g. save it to a database
+//   const newResult = Result({
+//     grades: json,
+//   });
+//   newResult.save();
+//   console.log(json);
 
-  res.send("File uploaded successfully");
-});
+//   res.send("File uploaded successfully");
+// });
 
 
 // bodyParser.json();
