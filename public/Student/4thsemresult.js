@@ -1,62 +1,35 @@
-// fetch("/api/studentResult").then((data) => {
-//     return data.json();
-// }).then((objectData) => {
-//     console.log(objectData[0].name);
-//     let tableData = "";
-//     objectData.map((values) => {
-//         tableData += `<tr>
-//                                     <td>${values.subject}</td>
-//                                     <td>${values.grade}</td>
-//                                 </tr> `
-//     });
-//     document.getElementById("table_body").innerHTML = tableData;
-// });
-
+const form = document.querySelector('#grades-form');
 const table = document.getElementById('tables');
 
-// Add a click event listener to the table
-table.addEventListener('click', (event) => {
-    // Check if the user clicked on a row
-    if (event.target.tagName === 'TD') {
-        // Get the row and its data
-        const row = event.target.parentNode;
-        const username = "Priya";
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-        // Create an object with the data
-        const data = {
-            username
-        };
+    const subjectCodes = table.querySelectorAll('tr td:first-child');
+    const grades = table.querySelectorAll('tr td:last-child');
+    const data = {};
 
-        // Send the data to the backend via a POST request
-        fetch('/api/studentResult', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-            .then(response => {
-                // Handle the response from the backend
-                console.log(response);
-            })
-            .catch(error => {
-                // Handle any errors that occurred during the request
-                console.error(error);
-            });
+    // Iterate over the table rows and create an object with the grades
+    for (let i = 0; i < subjectCodes.length; i++) {
+        const subjectCode = subjectCodes[i].textContent;
+        const grade = grades[i].textContent;
+        data[subjectCode] = grade;
     }
+
+    // Send the data to the server
+    fetch('/studentResult', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: 'Priya', // Replace with the actual username
+            result: data
+        })
+    })
+        .then(response => response.json())
+        .then(result => {
+            // Display the result on the page
+            console.log(result);
+        })
+        .catch(error => console.error(error));
 });
-
-<tbody>
-    <tr>
-        <td>SMA140C(T)</td>
-        <td>A+</td>
-    </tr>
-    <tr>
-        <td>IOT140C(T)</td>
-        <td>B+</td>
-    </tr>
-    <tr>
-        <td colspan="2">SGPA-9.5</td>
-    </tr>
-
-</tbody>

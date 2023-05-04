@@ -5,14 +5,13 @@ Online HTML, CSS and JavaScript editor to run code online.
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet">
-  
-  <title>Browser</title>
-  <link rel="stylesheet" href="index_style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <title>Browser</title>
+    <link rel="stylesheet" href="index_style.css" />
 </head>
 
 <body>
@@ -26,18 +25,18 @@ Online HTML, CSS and JavaScript editor to run code online.
         </div>
         <div class="menu_profile">
             <div class="navbar-profile" onclick="menuToggle();">
-                <img src="Image/profile.jpg" alt="Profile" >
+                <img src="Image/profile.jpg" alt="Profile">
             </div>
             <div class="profile_down">
                 <h3>Admin</h3>
-                
+
             </div>
         </div>
     </nav>
     <div class="contain_all">
         <aside>
             <div class="sidebar">
-                <a href="admin_dashboard.html" >
+                <a href="admin_dashboard.html">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
@@ -63,14 +62,14 @@ Online HTML, CSS and JavaScript editor to run code online.
                 </a>
             </div>
         </aside>
-        <main >
+        <main>
             <h1>Grades from Faculties</h1>
             <div class="date">
                 <h3><span id="date"></span></h3>
             </div>
             <div class="insights">
                 <a href="/backend/uploads/IVP.xlsx">
-                    <div class="IVP"> 
+                    <div class="IVP">
                         <!-- <a href=""    -->
                         <div>
                             <h2>Image and Vision Processing</h2>
@@ -87,24 +86,51 @@ Online HTML, CSS and JavaScript editor to run code online.
                 <a href="#">
                     <div class="CD">
                         <div>
-                            <h2>Compiler Design</h2>
+                            <h2>Technical Writing</h2>
                         </div>
                     </div>
                 </a>
                 <a href="#">
-                    <div class="OS">
+                    <div class="CO">
                         <div>
-                            <h2>Operating System</h2>
+                            <h2>Convex Optimization</h2>
                         </div>
                     </div>
-                </a>   
-                         
+
+                </a>
+                <style>
+                    .button {
+                        border: none;
+                        color: rgb(0, 0, 0);
+                        padding: 15px 32px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 4px 2px;
+                        cursor: pointer;
+                    }
+                
+                    .button1 {
+                        background-color: #7797a1;
+                    }
+                
+                    /* Green */
+                    .button2 {
+                        background-color: #7797a1;
+                    }
+                
+                    /* Blue */
+                </style>
+                <button class="button button2">Combine Results</button>
+                <button class="button button1">Publish Results</button>
+
             </div>
         </main>
         <div class="contain-rig">
-
         </div>
     </div>
+
 </body>
 <script src="scrpit.js"></script>
 
