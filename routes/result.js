@@ -86,17 +86,6 @@ router.post("/UploadResult", async (req, res) => {
 
 //get result is for displaying data of all students in the below form to show data on admin dashboard
 
-// {
-//         "_id": "644e3aaa540bde6612dbec35",
-//         "name": "Priya Yadav",
-//         "roll_no": "LCS2020055",
-//         "subjects": {
-//             "BLOC32": "C",
-//             "IVP33": "C",
-//             "TW034": "C"
-//         },
-//         "__v": 0
-//     },
 router.get("/getResult", async (req, res) => {
   try {
     // const { name, rollNo, code } = req.body;
