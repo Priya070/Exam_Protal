@@ -115,7 +115,7 @@ router.get("/getResult", async (req, res) => {
 
 // Publish result is for publishing  result for each student into student user collection database
 
-router.post("/publishResult", async (req, res) => {
+router.get("/publishResult", async (req, res) => {
   try {
     Result.find().then((data) => {
       // const student = data[0];

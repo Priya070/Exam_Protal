@@ -122,15 +122,42 @@ Online HTML, CSS and JavaScript editor to run code online.
                 
                     /* Blue */
                 </style>
-                <button class="button button2">Combine Results</button>
-                <button class="button button1">Publish Results</button>
+                <button id="combine" class="button button2">Combine Results</button>
+                <button id="publish" class="button button1">Publish Results</button>
 
             </div>
         </main>
         <div class="contain-rig">
         </div>
     </div>
+<script>
+    window.addEventListener('load', ()=>{
+        document.getElementById('combine').onclick = async()=>{
+            let data = await fetch('/api/getResult').then(response => response.json())
+            .then(data=>{
+                var newWindow = window.open('', '_blank');
+                data = JSON.stringify(data, null, 2);
+                // Generate HTML content with the data
+                var htmlContent = '<html><head><title>Data</title></head><body>' + data + '</body></html>';
 
+                // Write the HTML content to the new window
+                newWindow.document.write(htmlContent);
+
+                newWindow.print();
+            })
+        }
+        
+        document.getElementById('publish').onclick = async()=>{
+            let data = await fetch('/api/publishResult').then(response => response.text())
+            .then(data=>{
+                console.log(data)
+                alert("Result sended to student");
+            })
+        }
+    })
+
+
+</script>
 </body>
 <script src="scrpit.js"></script>
 

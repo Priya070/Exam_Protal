@@ -448,7 +448,7 @@ main .table-contain{
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    /* margin: 25px 0; */
+    margin: 25px 0;
     font-size: 1.2rem;
     min-width: 370px;
     border-radius: 10px;
@@ -467,8 +467,8 @@ main .table-contain tbody tr{
     border-bottom: 1px solid #dddddd;
 }
 main .table-contain tbody tr:last-of-type{
-    text-align: center;
-    font-size: 1.4rem;
+    text-align: left;
+    font-size: 1.3rem;
     font-weight: 500;
     border-bottom: 2px solid #2fc2f7;
 }
