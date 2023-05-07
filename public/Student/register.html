@@ -3,149 +3,124 @@ Online HTML, CSS and JavaScript editor to run code online.
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Browser</title>
-    <link rel="stylesheet" href="style_student.css" />
-  </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
 
-  <body>
-    <nav class="navbar">
-      <div class="navbar-logo">
-        <img src="Image/iiitl_logo.png" alt="Logo" />
-        <h2>IIIT <br />LUCKNOW</h2>
+  <title>Browser</title>
+  <link rel="stylesheet" href="/Student/style_student.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="/Student/Image/iiitl_logo.png" alt="Logo" />
+      <h2>IIIT <br />LUCKNOW</h2>
+    </div>
+    <div class="quotes">
+      <h2>welcome to the class welcome to the class</h2>
+    </div>
+    <div class="menu_profile">
+      <div class="navbar-profile" onclick="menuToggle();">
+        <img src="/Student/Image/profile.jpg" alt="Profile" />
       </div>
-      <div class="quotes">
-        <h2>welcome to the class welcome to the class</h2>
+      <div class="profile_down">
+        <h3>Priya</h3>
+        <ul>
+          <li>Roll No: lcs2020055</li>
+          <li>Branch: CS</li>
+          <li>Academic Year: 2024</li>
+        </ul>
       </div>
-      <div class="menu_profile">
-        <div class="navbar-profile" onclick="menuToggle();">
-          <img src="Image/profile.jpg" alt="Profile" />
-        </div>
-        <div class="profile_down">
-          <h3>Priya</h3>
-          <ul>
-            <li>Roll No: lcs2020055</li>
-            <li>Branch: CS</li>
-            <li>Academic Year: 2024</li>
-          </ul>
-        </div>
-        <!-- <script>
-          fetch("/api/getuser")
-            .then((data) => {
-              return data.json();
-            })
-            .then((objectData) => {
-              console.log(objectData[0].name);
-              let tableData = "";
-              objectData.map((values) => {
-        //         tableData = `<div class="profile_down">
-        //   <h3>Priya</h3>
-        //   <ul>
-        //     <li>Roll No: ${}</li>
-        //     <li>Branch: ${}</li>
-        //     <li>Academic Year: ${}</li>
-        //   </ul>
-        // </div>`;
-              });
-              document.getElementById("table_body").innerHTML = tableData;
-              // alert("uploaded successfully");
-            });
-        </script> -->
+     
+    </div>
+  </nav>
+  <div class="contain_all">
+    <aside>
+      <div class="sidebar">
+        <a href="/Student/index.html">
+          <span class="material-icons-sharp">grid_view</span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="/Student/syllabus.html">
+          <span class="material-icons-sharp">library_books</span>
+          <h3>Syllabus</h3>
+        </a>
+        <a href="/Student/exam_schedule.html">
+          <span class="material-icons-sharp">today</span>
+          <h3>Exam Schedule</h3>
+        </a>
+        <a href="/Student/results.html">
+          <span class="material-icons-sharp">credit_score</span>
+          <h3>Results</h3>
+        </a>
+        <a href="/Student/register.html" class="active">
+          <span class="material-icons-sharp">app_registration</span>
+          <h3>Register</h3>
+        </a>
+        <a href="/Student/seating.html">
+          <span class="material-icons-sharp">airline_seat_recline_normal</span>
+          <h3>
+            Seating <br />
+            Arrangement
+          </h3>
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">logout</span>
+          <h3>Logout</h3>
+        </a>
       </div>
-    </nav>
-    <div class="contain_all">
-      <aside>
-        <div class="sidebar">
-          <a href="index.html">
-            <span class="material-icons-sharp">grid_view</span>
-            <h3>Dashboard</h3>
-          </a>
-          <a href="syllabus.html">
-            <span class="material-icons-sharp">library_books</span>
-            <h3>Syllabus</h3>
-          </a>
-          <a href="exam_schedule.html">
-            <span class="material-icons-sharp">today</span>
-            <h3>Exam Schedule</h3>
-          </a>
-          <a href="results.html">
-            <span class="material-icons-sharp">credit_score</span>
-            <h3>Results</h3>
-          </a>
-          <a href="register.html" class="active">
-            <span class="material-icons-sharp">app_registration</span>
-            <h3>Register</h3>
-          </a>
-          <a href="seating.html">
-            <span class="material-icons-sharp"
-              >airline_seat_recline_normal</span
-            >
-            <h3>
-              Seating <br />
-              Arrangement
-            </h3>
-          </a>
-          <a href="#">
-            <span class="material-icons-sharp">logout</span>
-            <h3>Logout</h3>
-          </a>
-        </div>
-      </aside>
-      <main>
-        <h1>Results</h1>
-        <div class="date">
-          <h3><span id="date"></span></h3>
-        </div>
-        <div class="insights" style="grid-template-columns: repeat(1, 1fr)">
-          <div class="exam_register">
-            <div>
-              <h2>Back Paper Registration Form</h2>
+    </aside>
+    <main>
+      <h1>Results</h1>
+      <div class="date">
+        <h3><span id="date"></span></h3>
+      </div>
+      <div class="insights" style="grid-template-columns: repeat(1, 1fr)">
+        <div class="exam_register">
+          <div>
+            <h2>Back Paper Registration Form</h2>
+          </div>
+          <div class="form">
+            <div class="input_filed">
+              <label>Full Name</label>
+              <input id="name" type="text" class="input" />
             </div>
-            <div class="form">
-              <div class="input_filed">
-                <label>Full Name</label>
-                <input id="name" type="text" class="input" />
-              </div>
-              <div class="input_filed">
-                <label>Registration Number</label>
-                <input id="rollNo" type="text" class="input" />
-              </div>
-              <div class="input_filed">
-                <label>Subject Code</label>
-                <input id="subCode" type="text" class="input" />
-              </div>
-              <div class="input_filed">
-                <label>payment Link</label>
-                <!-- <a href="" class="aa">click to pay</a> -->
-                <button
-                  onclick="window.location.href = 'https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=956936';"
-                >
-                  Click to pay amount
-                </button>
-              </div>
-              <div class="input_filed">
-                <label>payment receipt</label>
-                <input type="file" id="receipt" accept=".pdf" />
-              </div>
+            <div class="input_filed">
+              <label>Registration Number</label>
+              <input id="rollNo" type="text" class="input" />
+            </div>
+            <div class="input_filed">
+              <label>Subject Code</label>
+              <input id="subCode" type="text" class="input" />
+            </div>
+            <div class="input_filed">
+              <label>payment Link</label>
+              <!-- <a href="" class="aa">click to pay</a> -->
+              <button
+                onclick="window.location.href = 'https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=956936';">
+                Click to pay amount
+              </button>
+            </div>
+            <div class="input_filed">
+              <label>payment receipt</label>
+              <input type="file" id="receipt" accept=".pdf" />
+            </div>
 
-              <div class="pay">
-                <button id="submitt" type="submit">Submit</button>
-              </div>
+            <div class="pay">
+              <button id="submitt" type="submit">Submit</button>
             </div>
           </div>
         </div>
-      </main>
-      <div class="contain-rig"></div>
-    </div>
-    <script src="scrpit.js"></script>
-    <script src="registration_for_backpaper.js"></script>
-  </body>
+      </div>
+    </main>
+    <div class="contain-rig"></div>
+  </div>
+  <script src="/Student/scrpit.js"></script>
+  <script src="/Student/registration_for_backpaper.js"></script>
+</body>
+
 </html>
