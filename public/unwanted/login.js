@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
-    document.getElementById('loginbtn').onclick = async() => {
+    document.getElementById('loginbtn').onclick = async (e) => {
+        e.preventDefault();
         let email = document.getElementById('email').value;
         let password = document.getElementById('password').value;
         console.log('skdjfef')
@@ -15,20 +16,20 @@ window.addEventListener('load', () => {
         }).then((res) => res.text())
 
         console.log(data)
-        setTimeout(() => {
-            console.log(data)
-        }, 10000);
+        // setTimeout(() => {
+        //     console.log(data)
+        // }, 10000);
         if (data === 'student') {
-            // window.location.href = 'student'
+            window.location.href = 'student'
         }
         else if (data === "teacher") {
-            // window.location.href = 'teacher'
+            window.location.href = 'teacher'
         }
         else if (data === 'admin') {
-            // window.location.href = 'admin'
+            window.location.href = 'admin'
         }
         else {
-            // window.location.href = 'login'
+            window.location.href = 'login'
         }
     }
 })
