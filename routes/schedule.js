@@ -21,16 +21,23 @@ const upload = multer({
 
 router.post('/schedule', upload.single('schedule'), async (req, res) => {
     try {
+        console.log("1")
         const sem = req.body.sem;
+
         if (!sem) {
             throw new Error('Semester is required');
         }
+        console.log("2")
 
         const newschedule = new Schedule({
             sem: req.body.sem,
             schedule: req.file.path
         });
+        console.log("3")
+
         newschedule.save();
+        console.log("5")
+
         res.send("schedule uploaded sucessfully");
 
     } catch (error) {
