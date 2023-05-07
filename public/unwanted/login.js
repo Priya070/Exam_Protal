@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
         let email = document.getElementById('email').value;
         let password = document.getElementById('password').value;
         console.log('skdjfef')
-        let data = await fetch('/api/login', {
+        let data = await fetch('https://examportal-0yo1.onrender.com/api/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
